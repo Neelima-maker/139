@@ -40,10 +40,17 @@ def preprocess_user_input(user_input):
     return np.array(bag)
 #Predict the class
 def bot_class_prediction(user_input):
-
-   
+    inp = preprocess_user_input(user_input)
+    prediction = model.predict(inp)
+    prediction_class_label = np.argmax(prediction[0])
+    return prediction_class_label
 
 #give response to the user input
+def bot_response(user_input):
+    print("Hi.. I am stella.. How can I help you!!")
+    
+
+
 
 
 
